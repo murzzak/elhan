@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Студента — Эльхан Жаныбаев</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта и навигация -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="#" class="logo-block">
+                <span class="logo-avatar">ЭЖ</span>
+                <span class="logo-text">Эльхан Жаныбаев</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+                ☰
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#education" class="nav-link">Обучение</a>
+                <a href="#projects" class="nav-link">Проекты</a>
+                <a href="#interests" class="nav-link">Интересы</a>
+                <a href="#contact" class="nav-link nav-btn">Связаться ↗</a>
+                <button class="theme-toggle-btn" id="themeToggleBtn" title="Переключить тему">🌙</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Главная секция (Hero) -->
+        <section class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="sub-badge">• ПОРТФОЛИО СТУДЕНТА</span>
+                    <h1 class="hero-title">Привет, я Эльхан.<br>Учусь. Пробую. Расту.</h1>
+                    <p class="hero-description">
+                        Учусь в колледже, задаю вопросы и превращаю новые знания в небольшие проекты. Здесь — мой опыт, идеи и первые шаги.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Смотреть проекты ↓</a>
+                        <a href="#about" class="btn btn-secondary">Немного обо мне ↗</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="Mee.jpeg" alt="Рабочее место Эльхана Жаныбаева" class="hero-arch-image">
+                    <p class="image-caption">Всё начинается с любопытства *</p>
+                </div>
+            </div>
+            
+            <!-- Информационная плашка статуса -->
+            <div class="status-bar">
+                <div class="container status-container">
+                    <span>Студент колледжа · 2 курс</span>
+                    <span class="dot">•</span>
+                    <span>Открыт к новым задачам</span>
+                    <span class="dot">•</span>
+                    <span>Учусь через практику</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 01: Немного обо мне -->
+        <section class="section-padding" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text-column">
+                        <span class="section-number">01 /</span>
+                        <h2 class="section-title">Немного обо мне</h2>
+                        <p class="text-paragraph">
+                            Мне нравится разбираться в новом и видеть результат своей работы. В колледже я учусь не только по учебникам: участвую в общих задачах, пробую разные роли и ищу то, что действительно увлекает.
+                        </p>
+                        <p class="text-paragraph">
+                            Сейчас моя цель — собрать больше практического опыта, стать увереннее в своих навыках и сделать что-то полезное вместе с другими.
+                        </p>
+                    </div>
+
+                    <div class="about-card-column" id="education">
+                        <div class="info-card green-card">
+                            <div class="card-header-icon">
+                                <span class="card-badge-text">ОБУЧЕНИЕ</span>
+                                <span class="icon">🎓</span>
+                            </div>
+                            <h3 class="card-title">Колледж Ала-тоо.</h3>
+                            <p class="card-subtitle">Среднее профессиональное образование 2 курс · 2025–2029</p>
+                            <div class="card-focus-block">
+                                <strong>В фокусе сейчас:</strong>
+                                <p>Учебные проекты, цифровые инструменты и навыки самостоятельной работы.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Блок навыков -->
+                <div class="skills-block">
+                    <div class="skills-header">
+                        <h3>Что я уже умею</h3>
+                        <span class="skills-sub">Практикую и продолжаю развивать</span>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-icon">🔍</span>
+                            <h4>Работа с информацией</h4>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">🖥️</span>
+                            <h4>Презентации и документы</h4>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">👥</span>
+                            <h4>Командная работа</h4>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-icon">📅</span>
+                            <h4>Самоорганизация</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Секция 02: От знаний к практике (Проекты с фильтрацией) -->
+        <section class="section-padding grey-bg-section" id="projects">
+            <div class="container">
+                <span class="section-number">02 /</span>
+                <h2 class="section-title">От знаний к практике</h2>
+                <p class="section-subtitle-text">
+                    Несколько примеров учебных работ. Не всё идеально — зато в каждой есть новый опыт.
+                </p>
+
+                <!-Панель кнопок фильтрации -->
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterProjects('all')">Все работы</button>
+                    <button class="filter-btn" onclick="filterProjects('research')">Исследования</button>
+                    <button class="filter-btn" onclick="filterProjects('study')">Учебные материалы</button>
+                    <button class="filter-btn" onclick="filterProjects('team')">Командные проекты</button>
+                </div>
+
+                <!--Сетка карточек проектов -->
+                <div class="projects-grid">
+                    <!-- Карточка 1 -->
+                    <article class="project-card" data-category="research">
+                        <div class="project-card-top green-bg-top">
+                            <span class="card-mini-tag">ЗАМЕТКИ ОБ УЧЕБЕ</span>
+                            <h3 class="card-banner-title">Маленькие привычки.</h3>
+                            <div class="bar-chart-illustration">
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-date">ИССЛЕДОВАНИЕ · 2026</span>
+                            <h4 class="project-name">Как мы учимся <span class="arrow">↗</span></h4>
+                            <p class="project-desc">Небольшой опрос об учебных привычках: от вопросов и сбора ответов до наглядных выводов.</p>
+                            <p class="project-role"><strong>Моя роль:</strong> опрос и анализ ответов</p>
+                            <div class="project-tags">
+                                <span class="tag">Исследования</span>
+                                <span class="tag">Таблицы</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="project-card" data-category="study">
+                        <div class="project-card-top white-bg-top">
+                            <span class="card-mini-tag">СОХРАНИ, ПРИГОДИТСЯ</span>
+                            <h3 class="card-banner-title">Первый курс. С чего начать?</h3>
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-date">УЧЕБНЫЙ МАТЕРИАЛ · 2026</span>
+                            <h4 class="project-name">Гид для первокурсника <span class="arrow">↗</span></h4>
+                            <p class="project-desc">Собрал полезные советы о первых неделях в колледже в одну простую и понятную памятку.</p>
+                            <p class="project-role"><strong>Моя роль:</strong> структура, текст и оформление</p>
+                            <div class="project-tags">
+                                <span class="tag">Документы</span>
+                                <span class="tag">Коммуникация</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Карточка 3 -->
+                    <article class="project-card" data-category="team">
+                        <div class="project-card-top light-green-bg-top">
+                            <div class="circles-illustration">◯ ◯ ◯</div>
+                            <h3 class="card-banner-title">Вместе — интереснее.</h3>
+                            <span class="card-mini-route">ИДЕЯ → ПЛАН → РЕЗУЛЬТАТ</span>
+                        </div>
+                        <div class="project-card-body">
+                            <span class="project-date">КОМАНДНЫЙ ПРОЕКТ · 2025</span>
+                            <h4 class="project-name">Идея для общего дела <span class="arrow">↗</span></h4>
+                            <p class="project-desc">Вместе с одногруппниками подготовили план небольшого студенческого мероприятия.</p>
+                            <p class="project-role"><strong>Моя роль:</strong> планирование и презентация</p>
+                            <div class="project-tags">
+                                <span class="tag">Команда</span>
+                                <span class="tag">Презентация</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 03: Не только пары -->
+        <section class="section-padding" id="interests">
+            <div class="container">
+                <span class="section-number">03 /</span>
+                <h2 class="section-title">Не только пары</h2>
+                <p class="section-subtitle-text">
+                    Опыт складывается из небольших шагов — в колледже и за его пределами.
+                </p>
+
+                <div class="hobbies-grid">
+                    <!-- Достижения -->
+                    <div class="achievements-column">
+                        <h3 class="sub-column-title">МОИ МАЛЕНЬКИЕ ДОСТИЖЕНИЯ</h3>
+                        
+                        <div class="achievement-item">
+                            <span class="year">2026</span>
+                            <div class="achievement-text">
+                                <h4>Защита учебного проекта</h4>
+                                <p>Учусь уверенно рассказывать о своей работе и отвечать на вопросы.</p>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <span class="year">2026</span>
+                            <div class="achievement-text">
+                                <h4>Помощь в жизни группы</h4>
+                                <p>Беру на себя небольшие задачи и помогаю с общими материалами.</p>
+                            </div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <span class="year">2025</span>
+                            <div class="achievement-text">
+                                <h4>Первый командный опыт</h4>
+                                <p>Пробую распределять роли и доводить общую идею до результата.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Карточка хобби -->
+                    <div class="outside-column">
+                        <div class="info-card green-card full-height">
+                            <div class="card-header-icon">
+                                <h3>За пределами учёбы</h3>
+                                <span class="icon">✨</span>
+                            </div>
+                            <p class="outside-desc">
+                                Читаю, гуляю с камерой и замечаю детали вокруг. Люблю узнавать, как устроены привычные вещи, и обсуждать хорошие идеи с друзьями.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag white-tag">Книги</span>
+                                <span class="tag white-tag">Фотография</span>
+                                <span class="tag white-tag">Прогулки</span>
+                                <span class="tag white-tag">Новые технологии</span>
+                            </div>
+                            <blockquote class="quote-box">
+                                «Лучший способ разобраться — попробовать самому».
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция 04: Форма обратной связи с обязательными label -->
+        <section class="section-padding grey-bg-section" id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>Связаться со мной</h2>
+                    <p>Заполните форму ниже, чтобы отправить мне сообщение.</p>
+                    
+                    <div class="success-message" id="successMessage">
+                        ✅ Сообщение успешно отправлено! Я отвечу вам в ближайшее время.
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="userName">Ваше имя:</label>
+                            <input type="text" id="userName" name="userName" placeholder="Введите ваше имя">
+                            <span class="error-text" id="nameError">Пожалуйста, введите имя (не менее 2 символов)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userEmail">Ваш Email:</label>
+                            <input type="email" id="userEmail" name="userEmail" placeholder="example@mail.com">
+                            <span class="error-text" id="emailError">Введите корректный адрес электронной почты</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userMessage">Сообщение:</label>
+                            <textarea id="userMessage" name="userMessage" rows="4" placeholder="Напишите ваше сообщение..."></textarea>
+                            <span class="error-text" id="messageError">Сообщение не должно быть пустым</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>© 2026 Эльхан Жаныбаев. Портфолио студента.</p>
+            <a href="#" class="back-to-top">Наверх ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

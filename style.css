@@ -1,0 +1,612 @@
+/* ==========================================================================
+   1. ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ
+   ========================================================================== */
+:root {
+    --bg-color: #F9F8F3;
+    --section-grey: #F2F1EC;
+    --card-green: #EAEFE3;
+    --text-main: #2B2B2B;
+    --text-muted: #6C757D;
+    --accent-green: #3D5240;
+    --white: #FFFFFF;
+    --border-color: #E2E0D8;
+    --font-title: 'Georgia', serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --transition: all 0.3s ease;
+}
+
+/* Переменные темной темы */
+body.dark-theme {
+    --bg-color: #1A1D1A;
+    --section-grey: #222622;
+    --card-green: #2C352D;
+    --text-main: #EAEAEA;
+    --text-muted: #A0A0A0;
+    --accent-green: #5C7A60;
+    --white: #252A25;
+    --border-color: #3A423B;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.grey-bg-section {
+    background-color: var(--section-grey);
+}
+
+/* ==========================================================================
+   2. ШАПКА И НАВИГАЦИЯ
+   ========================================================================== */
+.site-header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.logo-avatar {
+    width: 36px;
+    height: 36px;
+    background-color: var(--card-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 15px;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--accent-green);
+}
+
+.nav-btn {
+    border: 1px solid var(--text-main);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.theme-toggle-btn, .mobile-menu-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+/* ==========================================================================
+   3. ГЛАВНЫЙ БЛОК (HERO)
+   ========================================================================== */
+.hero-section {
+    padding-top: 60px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.sub-badge {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 48px;
+    line-height: 1.15;
+    margin: 16px 0;
+    font-weight: normal;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--accent-green);
+    color: var(--white);
+    border: 1px solid var(--accent-green);
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+}
+
+.hero-image-wrapper {
+    flex: 0 0 360px;
+    text-align: center;
+}
+
+.hero-arch-image {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 180px 180px 0 0;
+    background-color: #DCD6CD;
+}
+
+.image-caption {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 12px;
+}
+
+.status-bar {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+    background-color: var(--white);
+}
+
+.status-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   4. СЕКЦИИ И КАРТОЧКИ
+   ========================================================================== */
+.section-number {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: bold;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    font-size: 36px;
+    margin-bottom: 16px;
+    font-weight: normal;
+}
+
+.section-subtitle-text {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+/* Секция Обо мне */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.text-paragraph {
+    margin-bottom: 16px;
+    color: var(--text-main);
+}
+
+.info-card {
+    background-color: var(--card-green);
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.card-header-icon {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card-title {
+    font-family: var(--font-title);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.card-focus-block strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.skills-block {
+    border-top: 1px solid var(--border-color);
+    padding-top: 40px;
+}
+
+.skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 24px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-item {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* Секция Проектов */
+.filter-buttons {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: var(--accent-green);
+    color: var(--white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background-color: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card-top {
+    height: 160px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.white-bg-top { background-color: #F0EFEA; }
+.light-green-bg-top { background-color: #E2E8DE; }
+
+.green-bg-top {
+    background-color: #DCE5D8; /* Зеленоватый оттенок */
+    background-image: url('image2.jpg');
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+.white-bg-top {
+    background-color: #F0EFEA; /* Светло-серый/молочный оттенок */
+    background-image: url('salam.jpg');
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+.light-bg-top {
+    background-color: #E2E8DE; /* Мягкий серо-зеленый оттенок */
+    background-image: url('hz1.jpg');
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+
+
+.project-card-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-date {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+.project-name {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+.project-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.project-role {
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.tag {
+    font-size: 11px;
+    background-color: var(--section-grey);
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.white-tag {
+    background-color: var(--white);
+}
+
+/* Секция Интересы и Достижения */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.achievement-item {
+    display: flex;
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.year {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.quote-box {
+    margin-top: 30px;
+    font-style: italic;
+    font-family: var(--font-title);
+    border-left: 2px solid var(--accent-green);
+    padding-left: 12px;
+}
+
+/* Форма связи */
+.contact-box {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+.error-text {
+    color: #d9534f;
+    font-size: 12px;
+    display: none;
+}
+
+.form-group.error input, .form-group.error textarea {
+    border-color: #d9534f;
+}
+
+.form-group.error .error-text {
+    display: block;
+}
+
+.success-message {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   5. ПОДВАЛ (FOOTER)
+   ========================================================================== */
+.site-footer {
+    padding: 30px 0;
+    border-top: 1px solid var(--border-color);
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-to-top {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   6. МЕДИА-ЗАПРОСЫ (АДАПТИВНОСТЬ)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        padding: 20px;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .main-nav.active {
+        display: flex;
+    }
+
+    .hero-container, .about-grid, .hobbies-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid, .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .status-container .dot {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+}
