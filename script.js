@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ----------------------------------------------------
+    // ------------------------------------------
     // Функция 1: Мобильное гамбургер-меню
-    // ----------------------------------------------------
+    // ----------------------------------------------
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const mainNav = document.getElementById('mainNav');
 
@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
         mainNav.classList.toggle('active');
     });
 
-    // ----------------------------------------------------
+    // ------------------------------------------------
     // Функция 2: Переключение темы (Светлая / Темная)
-    // ----------------------------------------------------
+    // -------------------------------------------------
     const themeToggleBtn = document.getElementById('themeToggleBtn');
     
     themeToggleBtn.addEventListener('click', () => {
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ----------------------------------------------------
+    // ----------------------------------
     // Функция 3: Валидация полей формы обратной связи
-    // ----------------------------------------------------
+    // ----------------------------------
     const contactForm = document.getElementById('contactForm');
     const successMessage = document.getElementById('successMessage');
 
